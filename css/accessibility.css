@@ -1,0 +1,369 @@
+/* Accessibility Menu Styles */
+.accessibility-menu {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.accessibility-toggle {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.accessibility-toggle:hover {
+    transform: scale(1.1);
+}
+
+.accessibility-toggle i {
+    font-size: 1.5rem;
+}
+
+.accessibility-toggle span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.accessibility-panel {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    width: 300px;
+    display: none;
+}
+
+.accessibility-panel h2 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.option-group {
+    margin-bottom: 1.5rem;
+}
+
+.option-group h3 {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+.text-size-controls,
+.contrast-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.text-size-controls button,
+.contrast-controls button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-size-controls button:hover,
+.contrast-controls button:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.reading-guide,
+.screen-reader {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reading-guide:hover,
+.screen-reader:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Skip Links */
+.skip-links {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+}
+
+.skip-links:focus-within {
+    top: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* Reading Guide */
+.reading-guide-line {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color);
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.5;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --border-color: #000000;
+}
+
+.high-contrast * {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --text-color: #ffffff;
+    --background-color: #1a1a1a;
+    --border-color: #333333;
+}
+
+.dark-mode * {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Screen Reader Mode */
+.screen-reader-mode {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --text-color: #000000;
+    --background-color: #ffffff;
+    --border-color: #000000;
+}
+
+.screen-reader-mode * {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accessibility-menu {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .accessibility-panel {
+        width: calc(100vw - 2rem);
+        right: -1rem;
+        bottom: 4rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accessibility-panel {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Keyboard Shortcuts Help */
+.keyboard-shortcuts-help {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1002;
+    display: none;
+    max-width: 90%;
+    width: 500px;
+}
+
+.keyboard-shortcuts-help h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.keyboard-shortcuts-help ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.keyboard-shortcuts-help li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.keyboard-shortcuts-help kbd {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 1rem;
+    font-family: monospace;
+    font-size: 0.875rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.keyboard-shortcuts-help .close-help {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.keyboard-shortcuts-help .close-help:hover {
+    background: var(--primary-dark);
+}
+
+/* Form Error Messages */
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+[aria-invalid="true"] {
+    border-color: #dc3545 !important;
+}
+
+[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Focus Styles */
+:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High Contrast Focus */
+.high-contrast :focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Dark Mode Focus */
+.dark-mode :focus {
+    outline: 3px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* Responsive Keyboard Shortcuts Help */
+@media (max-width: 768px) {
+    .keyboard-shortcuts-help {
+        width: calc(100% - 2rem);
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+    }
+    
+    .keyboard-shortcuts-help kbd {
+        min-width: 60px;
+    }
+}
+
+/* Animation for Error Messages */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+[aria-invalid="true"] {
+    animation: shake 0.5s ease-in-out;
+} 

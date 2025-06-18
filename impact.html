@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact - GSF</title>
+    <meta name="description" content="Discover GSF's impact on communities through technology and innovation, featuring success stories and testimonials.">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/gs_foundation.png" alt="GSF Logo" width="185" height="50">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="#">Programs</a>
+                    <div class="dropdown-content">
+                        <a href="programs/graphene.html">Project Graphene</a>
+                        <a href="programs/imentor.html">iMentor</a>
+                        <a href="programs/nitrous.html">Nitrous</a>
+                        <a href="programs/eden.html">Eden</a>
+                        <a href="programs/bridgez.html">Bridgez</a>
+                    </div>
+                </div>
+                <a href="impact.html">Impact</a>
+                <a href="events.html">Events</a>
+                <a href="join.html">Join Us</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Our Impact</h1>
+                <p>Creating lasting change through technology and innovation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics Dashboard -->
+    <section class="metrics">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Impact Metrics</h2>
+            
+            <div class="metrics-grid">
+                <!-- Metric 1 -->
+                <div class="metric-card" data-aos="fade-up">
+                    <div class="metric-value">
+                        <span class="counter" data-target="5000">0</span>+
+                    </div>
+                    <p>Assistive devices provided to PWDs</p>
+                </div>
+                
+                <!-- Metric 2 -->
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="metric-value">
+                        <span class="counter" data-target="2000">0</span>+
+                    </div>
+                    <p>Underprivileged students empowered</p>
+                </div>
+                
+                <!-- Metric 3 -->
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="metric-value">
+                        <span class="counter" data-target="15">0</span>+
+                    </div>
+                    <p>Startups accelerated</p>
+                </div>
+                
+                <!-- Metric 4 -->
+                <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="metric-value">
+                        <span class="counter" data-target="95">0</span>+
+                    </div>
+                    <p>Women trained in sustainable business skills</p>
+                </div>
+            </div>
+            
+            <!-- Impact Charts -->
+            <div class="charts-grid">
+                <!-- Chart 1 -->
+                <div class="chart-card" data-aos="fade-up">
+                    <h3>Program Impact Distribution</h3>
+                    <canvas id="impactChart"></canvas>
+                </div>
+                
+                <!-- Chart 2 -->
+                <div class="chart-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Year-over-Year Growth</h3>
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="stories">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Success Stories</h2>
+            
+            <div class="stories-grid">
+                <!-- Story 1 -->
+                <div class="story-card" data-aos="fade-up">
+                    <img src="assets/success-story1.jpg" alt="DeafGain Success Story">
+                    <div class="story-content">
+                        <h3>DeafGain</h3>
+                        <p>Revolutionizing communication for the deaf community through innovative technology.</p>
+                        <div class="story-stats">
+                            <span class="stat-value">$500K</span>
+                            <span class="stat-separator">•</span>
+                            <span class="stat-text">15+ Jobs Created</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 2 -->
+                <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/success-story2.jpg" alt="Ms Green Success Story">
+                    <div class="story-content">
+                        <h3>Ms Green</h3>
+                        <p>Sustainable fashion brand empowering women through eco-friendly practices.</p>
+                        <div class="story-stats">
+                            <span class="stat-value">$300K</span>
+                            <span class="stat-separator">•</span>
+                            <span class="stat-text">25+ Jobs Created</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 3 -->
+                <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/success-story3.jpg" alt="Young Film School Success Story">
+                    <div class="story-content">
+                        <h3>Young Film School</h3>
+                        <p>Empowering youth through filmmaking education and creative expression.</p>
+                        <div class="story-stats">
+                            <span class="stat-value">$200K</span>
+                            <span class="stat-separator">•</span>
+                            <span class="stat-text">10+ Jobs Created</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What People Say</h2>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-header">
+                        <img src="assets/testimonial1.jpg" alt="Testimonial">
+                        <div>
+                            <h4>Sarah Ahmed</h4>
+                            <p>DeafGain Founder</p>
+                        </div>
+                    </div>
+                    <p>"GSF's support was instrumental in our journey. Their mentorship and resources helped us scale our impact and reach more people in need."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-header">
+                        <img src="assets/testimonial2.jpg" alt="Testimonial">
+                        <div>
+                            <h4>Mohammed Hassan</h4>
+                            <p>Eden Project Graduate</p>
+                        </div>
+                    </div>
+                    <p>"The digital education program transformed my life. I now have the skills and confidence to pursue my dreams in technology."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-header">
+                        <img src="assets/testimonial3.jpg" alt="Testimonial">
+                        <div>
+                            <h4>Layla Mahmoud</h4>
+                            <p>Ms Green Founder</p>
+                        </div>
+                    </div>
+                    <p>"GSF's sustainable business program gave me the tools and knowledge to build a successful eco-friendly fashion brand."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html> 

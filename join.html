@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - GSF</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/gs_foundation.png" alt="GSF Logo" width="185" height="50">
+                </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <div class="nav-dropdown">
+                    <a href="#">Programs</a>
+                    <div class="dropdown-content">
+                        <a href="programs/graphene.html">Project Graphene</a>
+                        <a href="programs/imentor.html">iMentor</a>
+                        <a href="programs/nitrous.html">Nitrous</a>
+                        <a href="programs/eden.html">Eden</a>
+                        <a href="programs/bridgez.html">Bridgez</a>
+                    </div>
+                </div>
+                <a href="impact.html">Impact</a>
+                <a href="events.html">Events</a>
+                <a href="join.html">Join Us</a>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join Our Mission</h1>
+                <p>Be part of our journey to create positive change through technology and innovation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ways to Get Involved -->
+    <section class="get-involved">
+        <div class="container">
+            <h2>Ways to Get Involved</h2>
+            <div class="involvement-grid">
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Share your skills and expertise to support our programs and initiatives.</p>
+                    <a href="#volunteer-form" class="btn-text">Volunteer Now</a>
+                </div>
+                
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner</h3>
+                    <p>Collaborate with us to create lasting impact in your community.</p>
+                    <a href="#partner-form" class="btn-text">Partner With Us</a>
+                </div>
+                
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Support our mission through financial contributions.</p>
+                    <a href="#donate-form" class="btn-text">Make a Donation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Form -->
+    <section id="volunteer-form" class="form-section">
+        <div class="container">
+            <h2>Volunteer With Us</h2>
+            <form class="volunteer-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="volunteer-name">Full Name</label>
+                        <input type="text" id="volunteer-name" required>
+                            </div>
+                    <div class="form-group">
+                        <label for="volunteer-email">Email</label>
+                        <input type="email" id="volunteer-email" required>
+                            </div>
+                    <div class="form-group">
+                        <label for="volunteer-phone">Phone</label>
+                        <input type="tel" id="volunteer-phone" required>
+                        </div>
+                    <div class="form-group">
+                        <label for="volunteer-availability">Availability</label>
+                        <select id="volunteer-availability" required>
+                            <option value="">Select availability</option>
+                            <option value="weekday-morning">Weekday Mornings</option>
+                            <option value="weekday-afternoon">Weekday Afternoons</option>
+                            <option value="weekday-evening">Weekday Evenings</option>
+                            <option value="weekend">Weekends</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                            </div>
+                    <div class="form-group full-width">
+                        <label for="volunteer-skills">Skills & Expertise</label>
+                        <textarea id="volunteer-skills" rows="3" required></textarea>
+                            </div>
+                    <div class="form-group full-width">
+                        <label for="volunteer-interests">Areas of Interest</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="mentoring">
+                                Mentoring
+                                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="teaching">
+                                Teaching
+                                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="tech">
+                                Technology
+                                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="events">
+                                Event Planning
+                                </label>
+                        </div>
+                            </div>
+                    <div class="form-group full-width">
+                        <label for="volunteer-message">Why do you want to volunteer with us?</label>
+                        <textarea id="volunteer-message" rows="4" required></textarea>
+                        </div>
+                </div>
+                <button type="submit" class="btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Partner Form -->
+    <section id="partner-form" class="form-section">
+        <div class="container">
+            <h2>Partner With Us</h2>
+            <form class="partner-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="partner-name">Organization Name</label>
+                        <input type="text" id="partner-name" required>
+                            </div>
+                    <div class="form-group">
+                        <label for="partner-type">Organization Type</label>
+                        <select id="partner-type" required>
+                            <option value="">Select type</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="nonprofit">Non-Profit</option>
+                            <option value="educational">Educational</option>
+                            <option value="government">Government</option>
+                            <option value="other">Other</option>
+                                </select>
+                            </div>
+                    <div class="form-group">
+                        <label for="partner-contact">Contact Person</label>
+                        <input type="text" id="partner-contact" required>
+                        </div>
+                    <div class="form-group">
+                        <label for="partner-email">Email</label>
+                        <input type="email" id="partner-email" required>
+                            </div>
+                    <div class="form-group">
+                        <label for="partner-phone">Phone</label>
+                        <input type="tel" id="partner-phone" required>
+                            </div>
+                    <div class="form-group">
+                        <label for="partner-website">Website</label>
+                        <input type="url" id="partner-website">
+                        </div>
+                    <div class="form-group full-width">
+                        <label for="partner-interests">Partnership Interests</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="partnership" value="programs">
+                                Program Collaboration
+                                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="partnership" value="funding">
+                                Funding
+                                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="partnership" value="resources">
+                                Resource Sharing
+                                </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="partnership" value="other">
+                                Other
+                                </label>
+                            </div>
+                        </div>
+                    <div class="form-group full-width">
+                        <label for="partner-message">Tell us about your organization and partnership goals</label>
+                        <textarea id="partner-message" rows="4" required></textarea>
+                        </div>
+                </div>
+                <button type="submit" class="btn-primary">Submit Partnership Request</button>
+            </form>
+        </div>
+    </section>
+
+ 
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="images/logo-white.png" alt="GSF Logo" class="footer-logo">
+                    <p>Empowering through technology, creating a more inclusive world.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="/about.html">About Us</a>
+                    <a href="/programs.html">Programs</a>
+                    <a href="/impact.html">Impact</a>
+                    <a href="/events.html">Events</a>
+                    <a href="/join.html">Join Us</a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@gsf.org</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, City, Country</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GSF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.mobile-dropdown').forEach(function(dropdown) {
+            dropdown.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        // Donation amount selection
+        document.querySelectorAll('.amount-option').forEach(function(button) {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.amount-option').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('donation-amount').value = this.textContent.replace('$', '');
+            });
+        });
+    </script>
+</body>
+</html> 
